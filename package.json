@@ -1,0 +1,21 @@
+{
+  "name": "juggglow-sdk",
+  "version": "0.0.0",
+  "description": "(unofficial) SDK for Juggglow - smart juggling balls",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Manuel Mitasch",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^1.1.1",
+    "debug": "^2.2.0",
+    "hashmap": "^2.0.4",
+    "noble": "^1.2.0",
+    "rsvp": "^3.1.0"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.1"
+  }
+}
