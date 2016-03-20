@@ -243,17 +243,18 @@ var strobeQuestion3 = {
 };
 var strobeQuestion4 = {
   type: 'input',
-  name: 'switchPercent',
-  message: 'Switch percent for strobe (0-255)?',
-  default: '127'
+  name: 'dutyCycle',
+  message: 'Duty cycle for strobe (0-1)?',
+  default: '0.5'
 };
 
 function askStrobe() {
   inquirer.prompt([strobeQuestion1, strobeQuestion2, strobeQuestion3, strobeQuestion4], function( answers ) {
     var color1 = answers.colorStart.split(',');
     var color2 = answers.colorEnd.split(',');
+    var dutyCycle = answers.dutyCycle;
 
-    service.strobeAll(answers.duration, answers.switchPercent, color1, color2);
+    service.strobeAll(answers.duration, dutyCycle, color1, color2);
     askCommand();
   });
 };
