@@ -14,7 +14,7 @@ service.on('found', function(prop) {
   //service.connect(prop);
 });
 
-service.scan().then(function(props) {
+service.scan(2).then(function(props) {
 //   console.log('TRYING TO CONNECT');
    return service.connectAll();
 }).then(function(props) {
@@ -58,7 +58,7 @@ function askCommand() {
     else if (answers.command == 10) askStopmodeLong();
     else if (answers.command == 11) askStopmodeShort();
     else if (answers.command == 12) { service.connectAll(); askCommand(); }
-    else if (answers.command == 13) { service.randomColorAll(10, 10); }
+    else if (answers.command == 13) askRandomColor();
   });
 };
 
@@ -278,9 +278,11 @@ var randomColorQuestion1 = {
   default: '3'
 };
 
-function askrandomColor() {
+function askRandomColor() {
   inquirer.prompt([randomColorQuestion3, randomColorQuestion4, randomColorQuestion1], function( answers ) {
     service.randomColorAll(answers.duration, answers.switchPercent, answers.mode);
     askCommand();
   });
 };
+
+
