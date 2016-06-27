@@ -44,7 +44,6 @@ jService.scan({ seconds: 3 }).then(function() {    // scan for 3 seconds
 }).catch(function(error) {
   console.log('ERROR: ' + error);
 });
-
 ```
 
 A service also provides many synchronous commands like:
@@ -102,9 +101,9 @@ The API is considered rather final, but changes will be made if necessary.
 TODOs
 -----
 
-* provide a CLI as a separate package
 * upload sequences
 * add basic statistics to catch events callback
+* provide a CLI as a separate package
 * better documentation
 * tests
 * option to send color command without queuing them - better solution when you are using a timeline based software (like Vezer) or DMX controller for real-time color control
