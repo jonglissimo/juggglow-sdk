@@ -17,3 +17,9 @@ npm-debug.log
 testem.log
 /docs
 test.js
+
+# vs code
+/.vscode
+jsconfig.json
+typings.json
+/typings
