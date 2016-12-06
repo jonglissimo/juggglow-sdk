@@ -1,0 +1,4 @@
+Type;Top R;Top G;Top B;Bottom R;Bottom G;Bottom B;Interval
+C;255;255;255;255;255;255;1000
+C;255;0;0;255;0;0;1000
+C;2;204;203;174;1;195;1000
