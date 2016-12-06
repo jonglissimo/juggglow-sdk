@@ -8,6 +8,8 @@
   },
   "author": "Manuel Mitasch",
   "license": "MIT",
+  "repository": "jonglissimo/juggglow-sdk",
+  "homepage": "https://github.com/jonglissimo/juggglow-sdk", 
   "dependencies": {
     "debug": "^2.2.0",
     "hashmap": "^2.0.4",
