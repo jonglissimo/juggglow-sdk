@@ -46,6 +46,12 @@ jService.scan({ seconds: 3 }).then(function() {    // scan for 3 seconds
 });
 ```
 
+A service provides some asynchronous promise-based commands like:
+
+* scan: scan for juggglows
+* connectAll: connect to all found juggglows
+* uploadAll: upload a csv sequence to all juggglows
+
 A service also provides many synchronous commands like:
 
 * colorAll: set the color of all connected juggglows
@@ -60,7 +66,8 @@ A service also provides many synchronous commands like:
 * shutdownAll: shutdown all juggglows
 * raw: send a raw Bluetooth LE hex string to the ball
 
-A service provides event handlers for events (eg. catch, throw, drop, idle).
+
+A service provides event handlers for juggglow events (eg. catch, throw, drop, idle) and global events (eg. found). 
 
 ```
 // on throw change color to white
@@ -101,7 +108,6 @@ The API is considered rather final, but changes will be made if necessary.
 TODOs
 -----
 
-* upload sequences
 * add basic statistics to catch events callback
 * provide a CLI as a separate package
 * better documentation
