@@ -4,7 +4,7 @@
 // 1) throw events to change the color to white
 // 2) catch events to change the color to green
 
-process.env.DEBUG = 'service,service:*,prop,prop:*'; // activate debug messages
+process.env.DEBUG = 'service,service:*,prop,prop:*,raw'; // activate debug messages
 
 var jService = require('../index.js');
 

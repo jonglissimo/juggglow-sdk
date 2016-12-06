@@ -5,7 +5,7 @@
 // * disables the standalone mode (so that the ball does not accidentally activate a standalone sequence when dropped)
 // * sets the standby mode and stop mode to very long (so that the ball does not switch off during the sequence)
 
-process.env.DEBUG = 'service,service:*,prop,prop:connect'; // activate debug messages
+process.env.DEBUG = 'service,service:*,prop,prop:connect,raw'; // activate debug messages
 
 var jService = require('../index.js');
 var colorToggle = true;
@@ -14,12 +14,11 @@ jService.scan({ seconds: 3 }).then(function(props) {
   return jService.connectAll();
 
 }).then(function(props) {
-  jService.stopModeAll({ seconds: 10800 });
-  jService.standbyModeAll({ minutes: 240 });
+  jService.stopModeAll({ seconds: 1800 });
+  jService.standbyModeAll({ minutes: 120 });
   jService.standAloneModeAll({ enable: false });
   jService.colorAll([0,255,0]); // indicate success visually
 
 }).catch(function(error) {
   console.log('ERROR: ' + error);
 });
-
