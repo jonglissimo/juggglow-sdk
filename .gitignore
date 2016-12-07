@@ -17,6 +17,7 @@ npm-debug.log
 testem.log
 /docs
 test.js
+test-multi-adapter.js
 
 # vs code
 /.vscode
