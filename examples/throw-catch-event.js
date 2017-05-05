@@ -8,10 +8,17 @@ process.env.DEBUG = 'service,service:*,prop,prop:*,raw'; // activate debug messa
 
 var jService = require('../index.js');
 
-jService.scan({ seconds: 3 }).then(function(props) {
-  return jService.connectAll({ count:1 });
+jService.scan({ seconds: 3 })
+.catch(function(error) {
+  console.log('ERROR: ' + error);
+});
 
-}).then(function(props) {
+jService.on('found', function(peripheral) {
+  return jService.connect({ peripheral: peripheral });
+});
+
+jService.on('connected', function(prop) {
+  console.log('connected');
   jService.on('throw', function (prop) {
     prop.color([255,255,255]);
   });
@@ -19,8 +26,5 @@ jService.scan({ seconds: 3 }).then(function(props) {
   jService.on('catch', function (prop) {
     prop.color([0,255,0]);
   });
-
-}).catch(function(error) {
-  console.log('ERROR: ' + error);
 });
 
