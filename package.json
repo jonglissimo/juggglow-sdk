@@ -1,6 +1,6 @@
 {
   "name": "juggglow-sdk",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "(unofficial) SDK for Juggglow - smart juggling balls",
   "main": "index.js",
   "scripts": {
