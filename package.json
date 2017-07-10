@@ -13,7 +13,7 @@
   "dependencies": {
     "debug": "^2.2.0",
     "hashmap": "^2.0.4",
-    "noble": "^1.7.0",
+    "noble": "^1.8.0",
     "rsvp": "^3.1.0"
   },
   "devDependencies": {
