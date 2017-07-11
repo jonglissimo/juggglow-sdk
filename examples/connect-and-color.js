@@ -16,17 +16,15 @@ jService.on('found', function(peripheral) {
   return jService.connect({ peripheral: peripheral });
 });
 
-jService.on('connected', function(prop) {
-  setInterval(function() {
-    if (colorToggle) {
-      jService.colorAll({ color: [255,0,0] });
-    } else {
-      jService.colorAll({ color: [255,255,255] });
-    }
+setInterval(function() {
+  if (colorToggle) {
+    jService.colorAll({ color: [255,0,0] });
+  } else {
+    jService.colorAll({ color: [255,255,255] });
+  }
 
-    colorToggle = !colorToggle;
-  }, 1000);
-});
+  colorToggle = !colorToggle;
+}, 1000);
 
 
 
