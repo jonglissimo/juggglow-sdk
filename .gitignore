@@ -18,6 +18,7 @@ testem.log
 /docs
 test.js
 test-multi-adapter.js
+.DS_Store
 
 # vs code
 /.vscode
