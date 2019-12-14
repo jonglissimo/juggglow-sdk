@@ -11,9 +11,9 @@
   "repository": "jonglissimo/juggglow-sdk",
   "homepage": "https://github.com/jonglissimo/juggglow-sdk",
   "dependencies": {
+    "@abandonware/noble": "^1.9.2-5",
     "debug": "^2.2.0",
     "hashmap": "^2.0.4",
-    "noble": "^1.9.1",
     "rsvp": "^3.1.0"
   },
   "devDependencies": {
